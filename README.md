@@ -1,4 +1,4 @@
-# CustomExtensions
+# Upload Anything
 
 OctoPrint plugin to allow uploading additional file types via the file upload process.
 
