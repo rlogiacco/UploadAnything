@@ -22,7 +22,6 @@ class UploadAnythingPlugin(octoprint.plugin.TemplatePlugin,
 
 	##-- Image upload extenstion tree hook
 	def get_extension_tree(self, *args, **kwargs):
-		self._logger.info("Setting up extensions to [%s]"%self.allowed)
 		return dict(
 			machinecode=dict(
 				uploadanything=self.allowed.replace(" ", "").split(",")
