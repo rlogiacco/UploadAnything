@@ -23,7 +23,7 @@ class UploadAnythingPlugin(octoprint.plugin.TemplatePlugin,
 	##-- Image upload extenstion tree hook
 	def get_extension_tree(self, *args, **kwargs):
 		return dict(
-			machinecode=dict(
+			model=dict(
 				uploadanything=self.allowed.replace(" ", "").split(",")
 			)
 		)
