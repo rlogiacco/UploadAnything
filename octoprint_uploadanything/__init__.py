@@ -10,7 +10,10 @@ class UploadAnythingPlugin(octoprint.plugin.TemplatePlugin,
 	
 	@property
 	def allowed(self):
-		return str(self._settings.get(["allowed"]))
+		if self._settings is None:
+			return ""
+		else:
+			return str(self._settings.get(["allowed"]))
 
 	##-- Settings hooks
 	def get_settings_defaults(self):
