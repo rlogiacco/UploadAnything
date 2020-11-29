@@ -27,7 +27,7 @@ class UploadAnythingPlugin(octoprint.plugin.TemplatePlugin,
 	def get_extension_tree(self, *args, **kwargs):
 		return dict(
 			model=dict(
-				uploadanything=self.allowed.replace(" ", "").split(",")
+				uploadanything=[x for x in self.allowed.replace(" ", "").split(",") if x != '']
 			)
 		)
 		
